@@ -9,6 +9,7 @@ int main(int argc, char* argv[]) {
     int interval = 5;
     int duration = -1; // -1 means run forever
     std::string outputFile = "system_log.txt";
+    bool verbose = false;
 
     for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];
@@ -21,9 +22,14 @@ int main(int argc, char* argv[]) {
         if (arg == "--duration" && i + 1 < argc) {
             duration = std::atoi(argv[i + 1]);
         }
+        if (arg == "--verbose") {
+            verbose = true;
+        }
     }
 
     Logger::setOutputFile(outputFile);
+    Logger::setVerbose(verbose);
+
     std::cout << "Logging every " << interval << " seconds to " << outputFile;
     if (duration > 0) std::cout << " for " << duration << " seconds";
     std::cout << "...\n";

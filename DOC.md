@@ -14,4 +14,5 @@
     ./SystemMonitor --interval 10  # this is if the main receives arguments.
     ./SystemMonitor --interval 3 --output mylog.txt # when you need to log to another file name.
     ./SystemMonitor --interval 3 --duration 15 --output testlog.txt # when you want to control log time
+    ./SystemMonitor --interval 3 --duration 15 --verbose # when we want to log the txt data in the console.
 2. then run:cat system_log.txt
