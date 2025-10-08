@@ -1,5 +1,5 @@
 # ninja log v6
-8	525	7816182436219093	CMakeFiles/SystemMonitor.dir/src/Logger.cpp.obj	d6c1c9e35787f9e3
-13	633	7816182436262691	CMakeFiles/SystemMonitor.dir/src/Monitor.cpp.obj	fea49ae24240942f
-3	749	7816182436168446	CMakeFiles/SystemMonitor.dir/main.cpp.obj	a5bc8d56e6a01c27
-750	899	7816182443551901	SystemMonitor.exe	6f10259ff4b03ce4
+10	730	7816196616207172	CMakeFiles/SystemMonitor.dir/src/Logger.cpp.obj	d6c1c9e35787f9e3
+16	736	7816196616290743	CMakeFiles/SystemMonitor.dir/src/Monitor.cpp.obj	fea49ae24240942f
+3	856	7816196616170124	CMakeFiles/SystemMonitor.dir/main.cpp.obj	a5bc8d56e6a01c27
+856	1044	7816196624697839	SystemMonitor.exe	6f10259ff4b03ce4

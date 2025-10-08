@@ -10,5 +10,7 @@
 3. Enter:ninja
 
 # How to see the logs:
-1. From inside the build folder run: ./SystemMonitor or ./SystemMonitor --interval 10  # this is if the main receives arguments.
+1. From inside the build folder run: ./SystemMonitor or 
+    ./SystemMonitor --interval 10  # this is if the main receives arguments.
+    ./SystemMonitor --interval 3 --output mylog.txt # when you need to log to another file name.
 2. then run:cat system_log.txt
