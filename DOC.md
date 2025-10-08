@@ -1,8 +1,14 @@
-# How to run the project:
+# USE POWERSHELL FOR THESE COMMANDS
+
+# How to run cmakelist any time it give problem:
+1. Delete the build folder.
+2. Enter the build folder and run:cmake ..
+
+# How to generate the exe:
 1. Create a build folder if does not exist.
 2. cd to build folder and enter: cmake .. -G "Ninja"
 3. Enter:ninja
 
 # How to see the logs:
-1. From inside the build folder run: ./SystemMonitor
+1. From inside the build folder run: ./SystemMonitor or ./SystemMonitor --interval 10  # this is if the main receives arguments.
 2. then run:cat system_log.txt

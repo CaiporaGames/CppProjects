@@ -2,18 +2,32 @@
 #include "Monitor.hpp"
 #include <thread>
 #include <chrono>
+#include <iostream>
+#include <cstdlib>
 
-void monitorLoop() {
+int main(int argc, char* argv[]) {
+    int interval = 5; // default seconds
+
+    // Parse --interval argument
+    for (int i = 1; i < argc; ++i) {
+        std::string arg = argv[i];
+        if (arg == "--interval" && i + 1 < argc) {
+            interval = std::atoi(argv[i + 1]);
+        }
+    }
+
+    std::cout << "Logging every " << interval << " seconds...\n";
+
+    std::thread monitorThread([interval]() {
     while (true) {
+        std::cout << "Logging system info...\n"; // Add this line
         Logger::log(getCPUUsage());
         Logger::log(getMemoryUsage());
         Logger::log(getUptime());
-        std::this_thread::sleep_for(std::chrono::seconds(5));
+        std::this_thread::sleep_for(std::chrono::seconds(interval));
     }
-}
+});
 
-int main() {
-    std::thread monitorThread(monitorLoop);
     monitorThread.join();
     return 0;
 }
