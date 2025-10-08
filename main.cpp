@@ -5,6 +5,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector> 
+#include <fstream>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 int main(int argc, char* argv[]) {
     int interval = 5;
@@ -16,6 +20,29 @@ int main(int argc, char* argv[]) {
     bool logCPU = false;
     bool logMem = false;
     bool logUptime = false;
+
+    //load conig.json if it exists.
+    std::ifstream configFile("../config.json");
+
+    if(configFile)
+    {
+        json config;
+        configFile >> config;
+
+        if(config.contains("interval")) interval = config["interval"];
+        if(config.contains("duration")) duration = config["duration"];
+        if(config.contains("threads")) threads = config["threads"];
+        if(config.contains("verbose")) verbose = config["verbose"];
+        if(config.contains("output")) outputFile = config["output"];
+
+        if(config.contains("metrics"))
+        {
+            auto metrics = config["metrics"];
+            if(metrics.contains("cpu")) logCPU = metrics["cpu"];
+            if(metrics.contains("mem")) logMem = metrics["mem"];
+            if(metrics.contains("uptime")) logUptime = metrics["uptime"];
+        }
+    }
 
     for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];

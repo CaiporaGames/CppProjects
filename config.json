@@ -1,0 +1,12 @@
+{
+  "interval": 2,
+  "duration": 10,
+  "threads": 3,
+  "verbose": true,
+  "output": "log.json.txt",
+  "metrics": {
+    "cpu": true,
+    "mem": true,
+    "uptime": false
+  }
+}
