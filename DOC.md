@@ -15,4 +15,5 @@
     ./SystemMonitor --interval 3 --output mylog.txt # when you need to log to another file name.
     ./SystemMonitor --interval 3 --duration 15 --output testlog.txt # when you want to control log time
     ./SystemMonitor --interval 3 --duration 15 --verbose # when we want to log the txt data in the console.
+    ./SystemMonitor --interval 1 --duration 10 --verbose # for simulationg safe thread.
 2. then run:cat system_log.txt

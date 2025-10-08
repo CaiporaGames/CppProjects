@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <mutex>
 
 class Logger {
 public:
@@ -9,4 +10,5 @@ public:
 private:
     static std::string outputFile;
     static bool verbose;
+    static std::mutex logMutex;
 };
