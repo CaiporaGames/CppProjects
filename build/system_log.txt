@@ -1,60 +1,90 @@
-Wed Oct  8 11:33:30 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:30 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:30 2025
-: Uptime: 
-Wed Oct  8 11:33:31 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:31 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:31 2025
-: Uptime: 
-Wed Oct  8 11:33:32 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:32 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:32 2025
-: Uptime: 
-Wed Oct  8 11:33:33 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:33 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:33 2025
-: Uptime: 
-Wed Oct  8 11:33:34 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:34 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:34 2025
-: Uptime: 
-Wed Oct  8 11:33:35 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:35 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:35 2025
-: Uptime: 
-Wed Oct  8 11:33:36 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:36 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:36 2025
-: Uptime: 
-Wed Oct  8 11:33:37 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:37 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:37 2025
-: Uptime: 
-Wed Oct  8 11:33:38 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:38 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:38 2025
-: Uptime: 
-Wed Oct  8 11:33:39 2025
-: CPU: simulated 42%
-Wed Oct  8 11:33:39 2025
-: Memory: simulated 3.2 GB used
-Wed Oct  8 11:33:39 2025
-: Uptime: 
+Wed Oct  8 12:41:16 2025
+: Thread 1 - CPU: simulated 42%
+Wed Oct  8 12:41:16 2025
+: Thread 1 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:16 2025
+: Thread 0 - CPU: simulated 42%
+Wed Oct  8 12:41:16 2025
+: Thread 0 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:16 2025
+: Thread 1 - Uptime: 
+Wed Oct  8 12:41:16 2025
+: Thread 2 - CPU: simulated 42%
+Wed Oct  8 12:41:16 2025
+: Thread 2 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:16 2025
+: Thread 0 - Uptime: 
+Wed Oct  8 12:41:16 2025
+: Thread 2 - Uptime: 
+Wed Oct  8 12:41:18 2025
+: Thread 2 - CPU: simulated 42%
+Wed Oct  8 12:41:18 2025
+: Thread 2 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:18 2025
+: Thread 0 - CPU: simulated 42%
+Wed Oct  8 12:41:18 2025
+: Thread 0 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:18 2025
+: Thread 2 - Uptime: 
+Wed Oct  8 12:41:18 2025
+: Thread 1 - CPU: simulated 42%
+Wed Oct  8 12:41:18 2025
+: Thread 1 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:18 2025
+: Thread 0 - Uptime: 
+Wed Oct  8 12:41:18 2025
+: Thread 1 - Uptime: 
+Wed Oct  8 12:41:20 2025
+: Thread 0 - CPU: simulated 42%
+Wed Oct  8 12:41:20 2025
+: Thread 0 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:20 2025
+: Thread 1 - CPU: simulated 42%
+Wed Oct  8 12:41:20 2025
+: Thread 1 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:20 2025
+: Thread 0 - Uptime: 
+Wed Oct  8 12:41:20 2025
+: Thread 2 - CPU: simulated 42%
+Wed Oct  8 12:41:20 2025
+: Thread 2 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:20 2025
+: Thread 2 - Uptime: 
+Wed Oct  8 12:41:20 2025
+: Thread 1 - Uptime: 
+Wed Oct  8 12:41:22 2025
+: Thread 2 - CPU: simulated 42%
+Wed Oct  8 12:41:22 2025
+: Thread 2 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:22 2025
+: Thread 1 - CPU: simulated 42%
+Wed Oct  8 12:41:22 2025
+: Thread 1 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:22 2025
+: Thread 1 - Uptime: 
+Wed Oct  8 12:41:22 2025
+: Thread 0 - CPU: simulated 42%
+Wed Oct  8 12:41:22 2025
+: Thread 0 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:22 2025
+: Thread 2 - Uptime: 
+Wed Oct  8 12:41:22 2025
+: Thread 0 - Uptime: 
+Wed Oct  8 12:41:24 2025
+: Thread 1 - CPU: simulated 42%
+Wed Oct  8 12:41:24 2025
+: Thread 1 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:24 2025
+: Thread 2 - CPU: simulated 42%
+Wed Oct  8 12:41:24 2025
+: Thread 2 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:24 2025
+: Thread 2 - Uptime: 
+Wed Oct  8 12:41:24 2025
+: Thread 0 - CPU: simulated 42%
+Wed Oct  8 12:41:24 2025
+: Thread 0 - Memory: simulated 3.2 GB used
+Wed Oct  8 12:41:24 2025
+: Thread 1 - Uptime: 
+Wed Oct  8 12:41:24 2025
+: Thread 0 - Uptime: 
