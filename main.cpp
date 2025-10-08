@@ -6,34 +6,42 @@
 #include <cstdlib>
 
 int main(int argc, char* argv[]) {
-    int interval = 5; // default seconds
+    int interval = 5;
+    int duration = -1; // -1 means run forever
     std::string outputFile = "system_log.txt";
 
-    // Parse --interval argument
-    for (int i = 1; i < argc; ++i) 
-    {
+    for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];
-        if (arg == "--interval" && i + 1 < argc) 
-        {
+        if (arg == "--interval" && i + 1 < argc) {
             interval = std::atoi(argv[i + 1]);
         }
-        if(arg == "--output" && i+1 < argc)
-        {
-            outputFile = argv[i+1];
+        if (arg == "--output" && i + 1 < argc) {
+            outputFile = argv[i + 1];
+        }
+        if (arg == "--duration" && i + 1 < argc) {
+            duration = std::atoi(argv[i + 1]);
         }
     }
-    Logger::setOutputFile(outputFile);
-    std::cout << "Logging every " << interval << " seconds to 0 "<< outputFile << " ...\n";
 
-    std::thread monitorThread([interval]() 
-    {
-        while (true) 
-        {
-            std::cout << "Logging system info...\n"; // Add this line
+    Logger::setOutputFile(outputFile);
+    std::cout << "Logging every " << interval << " seconds to " << outputFile;
+    if (duration > 0) std::cout << " for " << duration << " seconds";
+    std::cout << "...\n";
+
+    std::thread monitorThread([interval, duration]() {
+        auto start = std::chrono::steady_clock::now();
+        while (true) {
             Logger::log(getCPUUsage());
             Logger::log(getMemoryUsage());
             Logger::log(getUptime());
+
             std::this_thread::sleep_for(std::chrono::seconds(interval));
+
+            if (duration > 0) {
+                auto now = std::chrono::steady_clock::now();
+                auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(now - start).count();
+                if (elapsed >= duration) break;
+            }
         }
     });
 
