@@ -16,4 +16,5 @@
     ./SystemMonitor --interval 3 --duration 15 --output testlog.txt # when you want to control log time
     ./SystemMonitor --interval 3 --duration 15 --verbose # when we want to log the txt data in the console.
     ./SystemMonitor --interval 1 --duration 10 --verbose # for simulationg safe thread.
+    ./SystemMonitor --interval 2 --duration 10 --threads 2 --cpu --mem --verbose # conditionaly logs parts of the data
 2. then run:cat system_log.txt

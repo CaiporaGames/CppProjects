@@ -11,7 +11,11 @@ int main(int argc, char* argv[]) {
     int duration = -1;
     int threads = 1;
     std::string outputFile = "system_log.txt";
+    
     bool verbose = false;
+    bool logCPU = false;
+    bool logMem = false;
+    bool logUptime = false;
 
     for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];
@@ -31,6 +35,9 @@ int main(int argc, char* argv[]) {
         {
             threads = std::atoi(argv[i+1]);
         }
+        if(arg == "--cpu") logCPU = true;
+        if(arg == "--mem") logMem = true;
+        if(arg == "--uptime") logUptime = true;
     }
 
     Logger::setOutputFile(outputFile);
@@ -39,12 +46,13 @@ int main(int argc, char* argv[]) {
     std::vector<std::thread> threadPool;
 
     for (int t = 0; t < threads; ++t) {
-        threadPool.emplace_back([interval, duration, t]() {
+        threadPool.emplace_back([interval, duration, t, logCPU, logMem, logUptime]() {
             auto start = std::chrono::steady_clock::now();
-            while (true) {
-                Logger::log("Thread " + std::to_string(t) + " - " + getCPUUsage());
-                Logger::log("Thread " + std::to_string(t) + " - " + getMemoryUsage());
-                Logger::log("Thread " + std::to_string(t) + " - " + getUptime());
+            while (true) 
+            {
+                if(logCPU) Logger::log("Thread " + std::to_string(t) + " - " + getCPUUsage());
+                if(logMem) Logger::log("Thread " + std::to_string(t) + " - " + getMemoryUsage());
+                if(logUptime) Logger::log("Thread " + std::to_string(t) + " - " + getUptime());
 
                 std::this_thread::sleep_for(std::chrono::seconds(interval));
 
